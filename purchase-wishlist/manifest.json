@@ -1,0 +1,9 @@
+{
+  "id": "purchase-wishlist",
+  "name": "구매 위시리스트",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.7",
+  "description": "사고 싶은 것의 예상 금액과 우선순위를 한 장부에 모읍니다.",
+  "author": "구독함",
+  "isDesktopOnly": false
+}
