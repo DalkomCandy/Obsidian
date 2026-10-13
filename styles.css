@@ -1,0 +1,386 @@
+/* 구독함 */
+
+.subscription-shelf {
+  padding: 0;
+  overflow-y: auto;
+}
+
+.subscription-shelf .sheet {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: var(--size-4-6) var(--size-4-5) var(--size-4-12);
+}
+
+/* 머리글 */
+
+.subscription-shelf .head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--size-4-4);
+  margin-bottom: var(--size-4-4);
+}
+
+.subscription-shelf .intro {
+  min-width: 0;
+}
+
+.subscription-shelf .kicker {
+  margin: 0 0 var(--size-2-1);
+  font-size: var(--font-ui-small);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+}
+
+.subscription-shelf .total {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: var(--size-2-1);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.subscription-shelf .total .num {
+  font-size: 2.4em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-normal);
+}
+
+.subscription-shelf .total .unit {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.subscription-shelf .meta {
+  margin: var(--size-2-2) 0 0;
+  font-size: var(--font-ui-small);
+  color: var(--text-muted);
+}
+
+.subscription-shelf .empty-title {
+  margin: 0;
+  font-size: var(--h3-size);
+  font-weight: 600;
+}
+
+.subscription-shelf .add {
+  flex: none;
+  padding: var(--size-2-2) var(--size-4-3);
+  border-radius: var(--radius-m);
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  font-weight: 600;
+  cursor: var(--cursor);
+}
+
+.subscription-shelf .add:hover {
+  background: var(--interactive-accent-hover);
+}
+
+.subscription-shelf .text-btn {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-shadow: none;
+  background: none;
+  color: var(--text-accent);
+  font-size: inherit;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: var(--cursor);
+  height: auto;
+  line-height: inherit;
+}
+
+.subscription-shelf .text-btn:hover {
+  color: var(--text-accent-hover);
+  background: none;
+}
+
+.subscription-shelf .text-btn.danger {
+  color: var(--text-error);
+}
+
+.subscription-shelf .sample-line {
+  margin: 0 0 var(--size-4-3);
+  padding: var(--size-2-2) var(--size-4-3);
+  border-radius: var(--radius-m);
+  background: var(--background-secondary);
+  font-size: var(--font-ui-small);
+  color: var(--text-muted);
+}
+
+/* 찾기 */
+
+.subscription-shelf input.find {
+  width: 100%;
+  margin: 0 0 var(--size-4-3);
+}
+
+/* 목록 */
+
+.subscription-shelf .group {
+  margin: 0 0 var(--size-4-4);
+}
+
+.subscription-shelf .group h2 {
+  margin: 0 0 var(--size-2-2);
+  padding: 0 var(--size-2-2);
+  font-size: var(--font-ui-smaller);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.subscription-shelf .row {
+  display: flex;
+  align-items: center;
+  gap: var(--size-4-3);
+  width: 100%;
+  padding: var(--size-2-3) var(--size-2-2);
+  border: 0;
+  border-radius: var(--radius-m);
+  background: none;
+  box-shadow: none;
+  color: var(--text-normal);
+  text-align: left;
+  font-size: var(--font-ui-medium);
+  line-height: 1.35;
+  cursor: var(--cursor);
+  height: auto;
+}
+
+.subscription-shelf .row:hover {
+  background: var(--background-modifier-hover);
+}
+
+.subscription-shelf .row + .row {
+  border-top: 1px solid var(--background-modifier-border);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.subscription-shelf .row .day {
+  flex: none;
+  width: 2.2em;
+  font-size: 1.15em;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.subscription-shelf .row .main {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.subscription-shelf .row .name {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.subscription-shelf .row .sub,
+.subscription-shelf .row .card {
+  display: flex;
+  align-items: center;
+  gap: var(--size-2-1);
+  font-size: var(--font-ui-small);
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.subscription-shelf .row .amount {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.subscription-shelf .row .amount .was {
+  font-size: var(--font-ui-smaller);
+  font-weight: 400;
+  color: var(--text-faint);
+}
+
+.subscription-shelf .row.is-paused {
+  opacity: 0.6;
+}
+
+.subscription-shelf .row.is-paused .name {
+  text-decoration: line-through;
+}
+
+/* 분류 점 */
+
+.subscription-shelf .tick {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--text-faint);
+}
+
+.subscription-shelf .tick[data-cat="영상"] { background: var(--color-red); }
+.subscription-shelf .tick[data-cat="음악"] { background: var(--color-purple); }
+.subscription-shelf .tick[data-cat="통신"] { background: var(--color-blue); }
+.subscription-shelf .tick[data-cat="소프트웨어"] { background: var(--color-cyan); }
+.subscription-shelf .tick[data-cat="생활"] { background: var(--color-green); }
+.subscription-shelf .tick[data-cat="기타"] { background: var(--color-base-50); }
+
+/* 카드 표시 */
+
+.subscription-shelf .card .card-name {
+  padding: 0 var(--size-2-1);
+  border-radius: var(--radius-s);
+  background: var(--background-modifier-border);
+  color: var(--text-normal);
+  font-size: var(--font-ui-smaller);
+  font-weight: 500;
+}
+
+.subscription-shelf .card.card-applied .card-name {
+  background: var(--color-green);
+  color: var(--text-on-accent);
+}
+
+.subscription-shelf .card.card-missing,
+.subscription-shelf .card.card-no-rule {
+  color: var(--text-warning);
+}
+
+/* 편집기 */
+
+.subscription-shelf .editor {
+  margin: 0 0 var(--size-4-5);
+  padding: var(--size-4-4);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-l);
+  background: var(--background-primary-alt);
+}
+
+.subscription-shelf .editor-error {
+  margin: 0 0 var(--size-4-3);
+  padding: var(--size-2-2) var(--size-4-3);
+  border-radius: var(--radius-m);
+  background: var(--background-modifier-error);
+  color: var(--text-on-accent);
+  font-size: var(--font-ui-small);
+}
+
+.subscription-shelf .field {
+  display: grid;
+  grid-template-columns: 4.5em 1fr;
+  align-items: center;
+  gap: var(--size-4-3);
+  margin: 0 0 var(--size-2-3);
+}
+
+.subscription-shelf .field .label {
+  font-size: var(--font-ui-small);
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.subscription-shelf .field input[type="text"],
+.subscription-shelf .field input[type="date"],
+.subscription-shelf .field select {
+  width: 100%;
+  min-width: 0;
+}
+
+.subscription-shelf .field .check {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--size-2-2);
+  font-size: var(--font-ui-small);
+}
+
+.subscription-shelf .field-help,
+.subscription-shelf .card-status {
+  margin: 0 0 var(--size-2-3);
+  padding-left: calc(4.5em + var(--size-4-3));
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.subscription-shelf .card-status.is-applied {
+  color: var(--color-green);
+}
+
+.subscription-shelf .card-status.is-missing,
+.subscription-shelf .card-status.is-no-rule {
+  color: var(--text-warning);
+}
+
+.subscription-shelf .card-status .text-btn {
+  font-size: inherit;
+}
+
+.subscription-shelf .editor-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--size-4-4);
+  margin-top: var(--size-4-3);
+}
+
+.subscription-shelf .empty-filter,
+.subscription-shelf .foot {
+  margin: var(--size-4-4) 0 0;
+  padding: 0 var(--size-2-2);
+  font-size: var(--font-ui-small);
+  color: var(--text-muted);
+}
+
+/* 카드 자동완성 */
+
+.suggestion-item.subscription-shelf-suggest .suggest-title {
+  font-weight: 500;
+}
+
+.suggestion-item.subscription-shelf-suggest .suggest-hint {
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+}
+
+/* 좁은 화면 */
+
+@media (max-width: 480px) {
+  .subscription-shelf .sheet {
+    padding: var(--size-4-4) var(--size-4-3) var(--size-4-8);
+  }
+
+  .subscription-shelf .total .num {
+    font-size: 2em;
+  }
+
+  .subscription-shelf .field {
+    grid-template-columns: 1fr;
+    gap: var(--size-2-1);
+  }
+
+  .subscription-shelf .field-help,
+  .subscription-shelf .card-status {
+    padding-left: 0;
+  }
+
+  .subscription-shelf .row .card {
+    white-space: normal;
+  }
+}
