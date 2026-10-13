@@ -1,0 +1,9 @@
+{
+  "id": "subscription-shelf",
+  "name": "구독함",
+  "version": "0.2.0",
+  "minAppVersion": "1.5.7",
+  "description": "정기 구독의 이번 달 청구와 다음 결제일을 한 장부에 모읍니다. 카드 노트의 할인 혜택을 비용에 반영합니다.",
+  "author": "구독함",
+  "isDesktopOnly": false
+}

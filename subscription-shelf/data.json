@@ -1,0 +1,46 @@
+{
+  "subscriptions": [
+    {
+      "id": "a7c224f5-64fa-4680-a47e-aa06af46b90c",
+      "name": "Nexflix",
+      "amount": 18500,
+      "cycle": "monthly",
+      "billingDay": 8,
+      "billingMonth": 11,
+      "anchorDate": "2026-11-08",
+      "category": "영상",
+      "note": "",
+      "active": true,
+      "sample": false,
+      "card": ""
+    },
+    {
+      "id": "db9d4c00-aba2-469c-9c99-d354caf7f710",
+      "name": "Youtube Premium",
+      "amount": 14900,
+      "cycle": "monthly",
+      "billingDay": 18,
+      "billingMonth": 10,
+      "anchorDate": "2026-10-18",
+      "category": "영상",
+      "note": "",
+      "active": true,
+      "sample": false,
+      "card": ""
+    },
+    {
+      "id": "cd5d487a-b15f-44f1-b3b3-b70c128d084e",
+      "name": "더블스틸",
+      "amount": 20000,
+      "cycle": "monthly",
+      "billingDay": 1,
+      "billingMonth": 10,
+      "anchorDate": "2026-10-01",
+      "category": "생활",
+      "note": "",
+      "active": true,
+      "sample": false,
+      "card": ""
+    }
+  ]
+}
