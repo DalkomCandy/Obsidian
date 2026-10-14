@@ -1,0 +1,303 @@
+/* 가계부 */
+
+.household-ledger {
+  padding: 0;
+  overflow-y: auto;
+}
+
+.household-ledger .sheet {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: var(--size-4-6) var(--size-4-5) var(--size-4-12);
+}
+
+.household-ledger .head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--size-4-4);
+  margin-bottom: var(--size-4-4);
+}
+
+.household-ledger .intro {
+  min-width: 0;
+}
+
+.household-ledger .kicker {
+  margin: 0 0 var(--size-2-1);
+  font-size: var(--font-ui-small);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+}
+
+.household-ledger .total {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: var(--size-2-1);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.household-ledger .total .num {
+  font-size: 2.4em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-normal);
+}
+
+.household-ledger .total .unit {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.household-ledger .meta {
+  margin: var(--size-2-2) 0 0;
+  font-size: var(--font-ui-small);
+  color: var(--text-muted);
+}
+
+.household-ledger .empty-title {
+  margin: 0;
+  font-size: var(--h3-size);
+  font-weight: 600;
+}
+
+.household-ledger .add {
+  flex: none;
+  padding: var(--size-2-2) var(--size-4-3);
+  border-radius: var(--radius-m);
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  font-weight: 600;
+  cursor: var(--cursor);
+}
+
+.household-ledger .add:hover {
+  background: var(--interactive-accent-hover);
+}
+
+.household-ledger .text-btn {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-shadow: none;
+  background: none;
+  color: var(--text-accent);
+  font-size: inherit;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: var(--cursor);
+  height: auto;
+  line-height: inherit;
+}
+
+.household-ledger .text-btn:hover {
+  color: var(--text-accent-hover);
+  background: none;
+}
+
+.household-ledger .text-btn.danger {
+  color: var(--text-error);
+}
+
+.household-ledger .sample-line {
+  margin: 0 0 var(--size-4-3);
+  padding: var(--size-2-2) var(--size-4-3);
+  border-radius: var(--radius-m);
+  background: var(--background-secondary);
+  font-size: var(--font-ui-small);
+  color: var(--text-muted);
+}
+
+.household-ledger input.find {
+  width: 100%;
+  margin: 0 0 var(--size-4-3);
+}
+
+.household-ledger .group {
+  margin: 0 0 var(--size-4-4);
+}
+
+.household-ledger .group h2 {
+  margin: 0 0 var(--size-2-2);
+  padding: 0 var(--size-2-2);
+  font-size: var(--font-ui-smaller);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.household-ledger .row {
+  display: flex;
+  align-items: center;
+  gap: var(--size-4-3);
+  width: 100%;
+  padding: var(--size-2-3) var(--size-2-2);
+  border: 0;
+  border-radius: var(--radius-m);
+  background: none;
+  box-shadow: none;
+  color: var(--text-normal);
+  text-align: left;
+  font-size: var(--font-ui-medium);
+  line-height: 1.35;
+  cursor: var(--cursor);
+  height: auto;
+}
+
+.household-ledger .row:hover {
+  background: var(--background-modifier-hover);
+}
+
+.household-ledger .row + .row {
+  border-top: 1px solid var(--background-modifier-border);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.household-ledger .row .day {
+  flex: none;
+  width: 2.2em;
+  font-size: 1.15em;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.household-ledger .row .main {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.household-ledger .row .name {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.household-ledger .row .sub {
+  display: flex;
+  align-items: center;
+  gap: var(--size-2-1);
+  font-size: var(--font-ui-small);
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.household-ledger .row .amount {
+  flex: none;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.household-ledger .row.is-income .amount {
+  color: var(--color-green);
+}
+
+.household-ledger .tick {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--text-faint);
+}
+
+.household-ledger .tick[data-cat="식비"] { background: var(--color-red); }
+.household-ledger .tick[data-cat="카페"] { background: var(--color-orange); }
+.household-ledger .tick[data-cat="교통"] { background: var(--color-blue); }
+.household-ledger .tick[data-cat="생활"] { background: var(--color-green); }
+.household-ledger .tick[data-cat="의료"] { background: var(--color-purple); }
+.household-ledger .tick[data-cat="문화"] { background: var(--color-cyan); }
+.household-ledger .tick[data-cat="기타"] { background: var(--color-base-50); }
+
+.household-ledger .editor {
+  margin: 0 0 var(--size-4-5);
+  padding: var(--size-4-4);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-l);
+  background: var(--background-primary-alt);
+}
+
+.household-ledger .editor-error {
+  margin: 0 0 var(--size-4-3);
+  padding: var(--size-2-2) var(--size-4-3);
+  border-radius: var(--radius-m);
+  background: var(--background-modifier-error);
+  color: var(--text-on-accent);
+  font-size: var(--font-ui-small);
+}
+
+.household-ledger .field {
+  display: grid;
+  grid-template-columns: 4.5em 1fr;
+  align-items: center;
+  gap: var(--size-4-3);
+  margin: 0 0 var(--size-2-3);
+}
+
+.household-ledger .field .label {
+  font-size: var(--font-ui-small);
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.household-ledger .field input[type="text"],
+.household-ledger .field input[type="date"],
+.household-ledger .field select {
+  width: 100%;
+  min-width: 0;
+}
+
+.household-ledger .field-help {
+  margin: 0 0 var(--size-2-3);
+  padding-left: calc(4.5em + var(--size-4-3));
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.household-ledger .editor-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--size-4-4);
+  margin-top: var(--size-4-3);
+}
+
+.household-ledger .empty-filter,
+.household-ledger .foot {
+  margin: var(--size-4-4) 0 0;
+  padding: 0 var(--size-2-2);
+  font-size: var(--font-ui-small);
+  color: var(--text-muted);
+}
+
+@media (max-width: 480px) {
+  .household-ledger .sheet {
+    padding: var(--size-4-4) var(--size-4-3) var(--size-4-8);
+  }
+
+  .household-ledger .total .num {
+    font-size: 2em;
+  }
+
+  .household-ledger .field {
+    grid-template-columns: 1fr;
+    gap: var(--size-2-1);
+  }
+
+  .household-ledger .field-help {
+    padding-left: 0;
+  }
+}
