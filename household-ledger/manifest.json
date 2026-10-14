@@ -1,0 +1,9 @@
+{
+  "id": "household-ledger",
+  "name": "가계부",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.7",
+  "description": "사용한 금액을 날짜와 함께 적어 이번 달 지출을 한 장부에 모읍니다.",
+  "author": "구독함",
+  "isDesktopOnly": false
+}
